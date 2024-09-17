@@ -1,0 +1,275 @@
+/* Basic Reset for consistency */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Arial', sans-serif; /* Set a base font */
+}
+
+/* Header styling */
+.header {
+  background-color: #121212; /* Slightly darker for better contrast */
+  color: #00ff00; /* Bright green text for visibility */
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3); /* Increased shadow for depth */
+  border-bottom: 1px solid #333; /* Subtle border at the bottom */
+}
+
+/* Logo */
+.header .logo {
+  font-size: 1.6em;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #00ff00;
+  transition: color 0.3s, transform 0.3s; /* Added transform transition */
+}
+
+.header .logo:hover {
+  color: #33cc33; /* Slightly lighter green on hover */
+  transform: scale(1.05); /* Slight zoom effect on hover */
+}
+
+/* Navigation */
+.header .nav {
+  list-style: none;
+  display: flex;
+}
+
+.header .nav li {
+  margin: 0 20px; /* Increased spacing */
+}
+
+.header .nav a {
+  text-decoration: none;
+  color: #00ff00;
+  font-size: 1.1em; /* Slightly larger text */
+  font-weight: bold;
+  padding: 5px 0;
+  transition: color 0.3s, border-bottom 0.3s, transform 0.3s; /* Added transform transition */
+}
+
+.header .nav a:hover {
+  color: #33cc33; /* Slightly lighter green on hover */
+  border-bottom: 3px solid #33cc33; /* Thicker underline effect on hover */
+  transform: translateY(-3px); /* Slight lift effect on hover */
+}
+
+/* Sidebar Book Now Button */
+.book-now-button {
+  display: block;
+  width: 100%;
+  padding: 12px;
+  background-color: #e74c3c; /* Red color for the button */
+  color: white;
+  text-align: center;
+  border: none;
+  border-radius: 8px; /* Slightly more rounded corners */
+  cursor: pointer;
+  text-decoration: none;
+  transition: background-color 0.3s ease, transform 0.3s; /* Added transform transition */
+}
+
+.book-now-button:hover {
+  background-color: #c0392b; /* Darker red color on hover */
+  transform: scale(1.05); /* Slight zoom effect on hover */
+}
+
+/* Container Styling */
+.container01 {
+  max-width: 600px; /* Increased width for better content spacing */
+  margin: 0 auto;
+  align-items: center;
+  background: rgb(19, 16, 16);
+  min-height: 200px; /* Increased height for more content space */
+  display: grid;
+  place-content: center;
+  border-radius: 10px; /* More rounded corners */
+  padding: 20px;
+}
+
+/* Hero Content */
+.hero-content {
+  color: rgb(2, 178, 75);
+  padding: 20px;
+  border-radius: 10px;
+  position: relative;
+  background: rgba(0, 0, 0, 0.8); /* Semi-transparent background */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Added shadow for depth */
+}
+
+.hero-content > p {
+  font-size: 20px; /* Slightly larger font size */
+  line-height: 1.5; /* Improved readability */
+}
+
+/* Gradient for welcome */
+.hero-content::before,
+.hero-content::after {
+  content: "";
+  position: absolute;
+  inset: -0.2rem;
+  z-index: -1;  
+  background: conic-gradient(
+    from var(--gradient-angle),  
+    rgb(2, 178, 75),
+    rgb(114, 218, 154),
+    rgb(211, 211, 39),
+    rgb(2, 178, 75),
+    rgb(114, 218, 154),
+    rgb(211, 211, 39)
+  );
+  border-radius: inherit;
+  animation: rotation 20s linear infinite;
+}
+
+.hero-content::after {
+  filter: blur(5px); /* Slightly increased blur */
+}
+
+/* Rotation Animation */
+@keyframes rotation {
+  0% { --gradient-angle: 0deg; }
+  100% { --gradient-angle: 360deg; }
+}
+
+/* Hero Section */
+.hero-section {
+  color: rgb(194, 194, 194);
+  text-align: center;
+  padding: 120px 0; /* Increased padding for more spacious layout */
+}
+
+.hero-section h1 {
+  font-size: 42px; /* Larger heading */
+  margin-bottom: 30px; /* Increased margin for spacing */
+}
+
+.hero-section > p {
+  font-size: 20px;
+  margin-bottom: 50px; /* Increased margin for spacing */
+}
+
+.hero-section img {
+  width: 60px; /* Slightly larger icon */
+  height: 60px;
+  border-radius: 50%;
+  margin-top: 30px; /* Increased margin for spacing */
+}
+
+/* Login/Registration Links */
+.hero-section div a {
+  color: rgb(194, 194, 194);
+  text-decoration: none;
+  font-size: 18px; /* Slightly larger text */
+  transition: color 0.3s; /* Added transition for color */
+}
+
+.hero-section div a:hover {
+  color: #00ff00; /* Change color on hover */
+}
+
+/* Services Section */
+.service-row {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+  background: rgba(0, 0, 0, 0.6); /* Subtle background for separation */
+  border-radius: 8px; /* Rounded corners */
+  margin-bottom: 20px; /* Spacing between rows */
+}
+
+.img-container {
+  flex: 0 0 auto;
+  margin-right: 20px;
+}
+
+.img001 {
+  width: 360px; /* Slightly larger image */
+  height: 260px;
+  background-size: cover;
+  border-radius: 8px; /* Rounded corners for images */
+}
+
+.text-container {
+  flex: 1;
+}
+
+.service-row h5 {
+  color: rgb(2, 178, 75);
+  font-size: 26px; /* Larger font size */
+  margin-bottom: 15px; /* Increased margin for spacing */
+}
+
+.service {
+  max-width: 1200px; /* Increased max width */
+  margin: auto;
+  padding-left: 30px; /* Increased padding */
+  padding-right: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+  .service-row {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .img-container {
+    margin-right: 0;
+    margin-bottom: 15px; /* Increased margin for smaller screens */
+  }
+
+  .container {
+    max-width: 100%;
+    padding: 15px; /* Increased padding */
+  }
+
+  .hero-section {
+    padding: 80px 0; /* Increased padding */
+  }
+
+  .hero-section h1 {
+    font-size: 32px; /* Larger heading */
+    margin-bottom: 20px; /* Increased margin */
+  }
+
+  .hero-section p {
+    font-size: 18px; /* Larger font size */
+    margin-bottom: 35px; /* Increased margin */
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .hero-section h1 {
+    font-size: 28px; /* Larger heading */
+    margin-bottom: 15px; /* Increased margin */
+  }
+
+  .hero-section p {
+    font-size: 16px; /* Larger font size */
+    margin-bottom: 25px; /* Increased margin */
+  }
+
+  .booking-section {
+    flex-direction: column;
+    align-items: flex-start;
+    margin-left: 0;
+  }
+
+  .booking-context {
+    margin: 25px 0; /* Increased margin for smaller screens */
+  }
+
+  .booking-btn {
+    margin-right: 0;
+  }
+}

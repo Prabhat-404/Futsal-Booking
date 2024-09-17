@@ -1,0 +1,46 @@
+/* Reset default browser styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Global styles */
+html {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.5;
+  background-color: rgb(22, 14, 14); /* Set background to black */
+  color: #fff; /* Set text color to white for contrast */
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex-grow: 1;
+}
+
+footer {
+  flex-shrink: 0;
+}
+
+/* Apply green color effect */
+/* h1, h2, h3, h4, h5, h6 {
+  color: #27ae60; /* Green color for headings */ 
+
+a {
+  color: #27ae60; /* Green color for links */
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
